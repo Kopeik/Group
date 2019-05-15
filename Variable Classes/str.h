@@ -81,7 +81,7 @@ public:
     {
         return word;
     }
-    char* rep(const char *p)
+    void rep(const char *p)
     {
         if(word!=nullptr)
             delete word;

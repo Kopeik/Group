@@ -4,12 +4,13 @@
 
 #ifndef GROUP_MEMBER_H
 #define GROUP_MEMBER_H
-#include "Variable Classes/str.h"+
+#include "Variable Classes/str.h"
 #include "Variable Classes/Date.h"
 #include "Picture.h"
+#include "Account.h"
 using namespace std;
 
-class Member {
+class Member:Account {
     int id;
     str name;
     Date joinDate;
@@ -24,6 +25,12 @@ public:
     Member(Member *copy):name(copy->name),pic(copy->picture()),phoneNumber(copy->getPhone())
     {
         id=copy->getId();
+    }
+    bool operator==(const Member &mom)
+    {
+        if(id==mom.getId())
+            return true;
+        return false;
     }
     void setName(str p)
     {
@@ -41,7 +48,7 @@ public:
     {
         return phoneNumber;
     }
-    int getId(){return id;}
+    int getId()const{return id;}
     Date getJoinDate(){return joinDate;}
     Picture picture()
     {
