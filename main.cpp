@@ -3,12 +3,12 @@
 #include "Group.h"
 
 int main() {
-    Member pussyBich(12,"Jannet",Date(12,7,1999),"1-800-Suck-Ma-Dik","hentaiheaven.org");
-cout<<pussyBich;
-Member dezNuts(pussyBich);
+    Member jeff(12,"Jannet",Date(12,7,1999),"1-800-lllhhoool","eeee.org");
+cout<<jeff;
+Member dezNuts(jeff);
 cout<<dezNuts;
-Group kkk(6,"DoritoLovers",Date(12,6,1921),"Coocks","Deek");
-kkk.addMember(pussyBich);
+Group theBoys(6,"DoritoLovers",Date(12,6,1921),"Coocks","Deek");
+theBoys.addMember(jeff);
 
 
 

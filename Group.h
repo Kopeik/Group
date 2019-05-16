@@ -12,7 +12,7 @@
 #include "Member.h"
 #include "Account.h"
 
-class Group:Account {
+class Group:public Account {
 
 str description;
 list<Member> team;
@@ -23,7 +23,7 @@ public:
 
     }
 
-    Group(Group &lol):Account(lol.getName(),lol.getDate(),lol.getId()),description(lol.getDescription()),pic(lol.getPic())
+    Group(Group &lol):Account(lol.getName(),lol.getJoinDate(),lol.getId()),description(lol.getDescription()),pic(lol.getPic())
     {
 
     }

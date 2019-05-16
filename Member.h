@@ -10,36 +10,24 @@
 #include "Account.h"
 using namespace std;
 
-class Member:Account {
-    int id;
-    str name;
-    Date joinDate;
+class Member:public Account {
     str phoneNumber;
     Picture pic;
 
 public:
-    Member(int theId,char *daName,Date idk,char *daNumber,char* daUrl):name(daName),pic(daUrl),phoneNumber(daNumber)
+    Member(int theId,char *daName,Date idk,char *daNumber,char* daUrl):Account(daName,idk,theId),pic(daUrl),phoneNumber(daNumber)
     {
-        id=theId;
     }
-    Member(Member *copy):name(copy->name),pic(copy->picture()),phoneNumber(copy->getPhone())
+    Member(Member *copie):Account(copie->getName(),copie->getJoinDate(),copie->getId()),phoneNumber(copie->getPhone()),pic(copie->picture())
     {
-        id=copy->getId();
     }
     bool operator==(const Member &mom)
     {
-        if(id==mom.getId())
+        if(getId()==mom.getId())
             return true;
         return false;
     }
-    void setName(str p)
-    {
-        name=p;
-    }
-    str getName()
-    {
-        return name;
-    }
+
     void setPhone(str p)
     {
         phoneNumber=p;
@@ -48,15 +36,14 @@ public:
     {
         return phoneNumber;
     }
-    int getId()const{return id;}
-    Date getJoinDate(){return joinDate;}
+
     Picture picture()
     {
         return pic;
     }
-    friend ostream& operator<<(ostream& os,const Member& mem)
+    friend ostream& operator<<(ostream& os,Member& mem)
     {
-        cout<<mem.name<<":\n"<<"Id: "<<mem.id<<"\nPhone number: "<<mem.phoneNumber<<"\nJoin date: "<<mem.joinDate<<"\nURL:"<<mem.pic<<endl;
+        cout<<mem.getName()<<":\n"<<"Id: "<<mem.getId()<<"\nPhone number: "<<mem.getPhone()<<"\nJoin date: "<<mem.getJoinDate()<<"\nURL:"<<mem.picture()<<endl;
     }
 
 

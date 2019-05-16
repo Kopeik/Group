@@ -11,14 +11,19 @@ int id;
 str name;
 Date joinDate;
 public:
-    int getId(){return id;}
+    int getId() const{return id;}
     str getName(){return name;}
     void setName(str &lol){name=lol;}
-    Date getDate(){return joinDate;}
+    Date getJoinDate(){return joinDate;}
     Account(const char* theName,Date theDate,int theId):name(theName),joinDate(theDate)
     {
         id=theId;
     }
+     Account(str theName,Date theDate,int theId):name(theName),joinDate(theDate)
+    {
+        id=theId;
+    }
+
 };
 
 
