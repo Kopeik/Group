@@ -15,6 +15,7 @@ public:
     Picture(char *lol):url(lol){}
     Picture(str lol):url(lol){}
     Picture(Picture *lol):url(lol->getUrl()){}
+    Picture():url(){}
     void draw()
     {
         cout<<url.rep();

@@ -9,6 +9,8 @@ Member dezNuts(jeff);
 cout<<dezNuts;
 Group theBoys(6,"DoritoLovers",Date(12,6,1921),"Coocks","Deek");
 theBoys.addMember(jeff);
+Group g;
+g.describe();
 
 
 

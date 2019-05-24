@@ -1,0 +1,3 @@
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/cmake-build-debug/CMakeFiles/Group.dir
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir

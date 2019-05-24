@@ -1,0 +1,52 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Account.h
+
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Group.h
+list
+-
+Variable Classes/Date.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Variable Classes/Date.h
+Variable Classes/str.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Variable Classes/str.h
+Member.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Member.h
+Account.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Account.h
+
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Member.h
+Variable Classes/str.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Variable Classes/str.h
+Variable Classes/Date.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Variable Classes/Date.h
+Picture.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Picture.h
+Account.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Account.h
+
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Picture.h
+Variable Classes/str.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Variable Classes/str.h
+
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Variable Classes/Date.h
+
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Variable Classes/str.h
+iostream
+-
+string.h
+-
+
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/main.cpp
+iostream
+-
+Member.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Member.h
+Group.h
+C:/Users/DODI/Desktop/C++/Group-master/Group-master/Group.h
+

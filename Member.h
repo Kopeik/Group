@@ -12,15 +12,16 @@ using namespace std;
 
 class Member:public Account {
     str phoneNumber;
-    Picture pic;
+
 
 public:
-    Member(int theId,char *daName,Date idk,char *daNumber,char* daUrl):Account(daName,idk,theId),pic(daUrl),phoneNumber(daNumber)
+    Member(int theId,char *daName,Date idk,char *daNumber,char* daUrl):Account(daName,idk,theId,daUrl),phoneNumber(daNumber)
     {
     }
-    Member(Member *copie):Account(copie->getName(),copie->getJoinDate(),copie->getId()),phoneNumber(copie->getPhone()),pic(copie->picture())
+    Member(Member *copie):Account(copie->getName(),copie->getJoinDate(),copie->getId(),copie->picture().getUrl()),phoneNumber(copie->getPhone())
     {
     }
+    Member():Account(),phoneNumber(){}
     bool operator==(const Member &mom)
     {
         if(getId()==mom.getId())
@@ -37,9 +38,11 @@ public:
         return phoneNumber;
     }
 
-    Picture picture()
+    void describe()
     {
-        return pic;
+        Account::describe();
+        Member::describe();
+        cout<<"I'm Member::describe()\n";
     }
     friend ostream& operator<<(ostream& os,Member& mem)
     {

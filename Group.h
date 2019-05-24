@@ -16,21 +16,21 @@ class Group:public Account {
 
 str description;
 list<Member> team;
-Picture pic;
+
 public:
-    Group(int theId,const char* theName,Date theDate,const char* theDescription,const str &pic):Account(theName,theDate,theId),description(theDescription),pic(pic)
+    Group(int theId,const char* theName,Date theDate,const char* theDescription,const str &pic):Account(theName,theDate,theId,pic),description(theDescription)
     {
 
     }
 
-    Group(Group &lol):Account(lol.getName(),lol.getJoinDate(),lol.getId()),description(lol.getDescription()),pic(lol.getPic())
+    Group(Group &lol):Account(lol.getName(),lol.getJoinDate(),lol.getId(),lol.picture().getUrl()),description(lol.getDescription())
     {
 
     }
+    Group():Account(),description(),team(){}
 
     void setDescription(str &lol){description=lol;}
 
-Picture getPic(){return pic.getUrl();}
    str getDescription(){return description;}
 
 
@@ -46,7 +46,11 @@ list<Member> getMember()
 {
     return team;
 }
-
+void describe()
+{
+        Account::describe();
+        cout<<"I'm Group::describe()\n";
+}
 
 };
 
